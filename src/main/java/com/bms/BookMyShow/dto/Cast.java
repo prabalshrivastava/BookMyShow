@@ -7,7 +7,6 @@ import lombok.Data;
 
 @Data
 @Entity
-@MappedSuperclass
 public class Cast extends BaseClass {
   private Profile profile;
   private CastType castType;
