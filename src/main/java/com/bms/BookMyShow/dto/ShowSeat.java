@@ -32,6 +32,6 @@ public class ShowSeat extends BaseModel {
    * 1 ShowSeatState can be associated with multiple ShowSeat. -> BOOKED ShowSeatState are Avengers@5pm@Audi1@A1,Avengers@5pm@Audi1@A2,Avengers@5pm@Audi1@A3
    */
 //  @ManyToOne
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   private ShowSeatState showSeatState;
 }

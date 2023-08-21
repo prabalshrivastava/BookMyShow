@@ -24,6 +24,6 @@ public class Auditorium extends BaseModel {
    */
 //  @ManyToMany
   @ElementCollection
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   private List<MovieFormat> movieFormats;
 }

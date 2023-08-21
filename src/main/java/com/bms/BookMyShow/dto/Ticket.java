@@ -30,7 +30,7 @@ public class Ticket extends BaseModel {
    * 1 TicketStatus is associated with multiple ticket -> Booked are ticket 999,213
    */
 //  @ManyToOne
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   TicketStatus ticketStatus;
   /**
    * 1 Ticket has 1 User -> Ticket 999 belongs to Prabal

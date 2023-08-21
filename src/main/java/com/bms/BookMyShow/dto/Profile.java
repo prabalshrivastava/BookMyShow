@@ -13,7 +13,7 @@ public class Profile extends BaseModel {
    * 1 Cast/Person can have 1 gender eg male
    * 1 Gender can belong to muliple Person/Cast eg Male are  Robert Downey Jr,Shah ruk khan
    */
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
 //  @OneToMany
   Gender gender;
   Byte age;

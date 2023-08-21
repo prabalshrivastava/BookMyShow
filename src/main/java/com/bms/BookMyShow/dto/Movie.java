@@ -26,7 +26,7 @@ public class Movie extends BaseModel {
    */
 //  @ManyToMany
   @ElementCollection
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   private List<Genre> genre;
   /**
    * 1 Movie can have 1 IMDB rating. -> Avengers has 5 star rating with reviews associated
@@ -40,7 +40,7 @@ public class Movie extends BaseModel {
    */
 //  @ManyToMany
   @ElementCollection
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   private List<Language> languages;
   private float duration;
   /**
@@ -49,6 +49,6 @@ public class Movie extends BaseModel {
    */
 //  @ManyToMany
   @ElementCollection
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   private List<MovieFormat> movieFormats;
 }

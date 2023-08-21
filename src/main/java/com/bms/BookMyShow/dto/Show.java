@@ -30,13 +30,13 @@ public class Show extends BaseModel {
    * 1 ShowStatus can be applicable for multiple shows ie Running Shows are Avengers5pm@Audi1,Avengers7pm@Audi1,Avengers5pm@Audi2
    */
 //  @ManyToOne
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   private ShowStatus showStatus;
   /**
    * 1 Show can have a single language for the current Show Avengers5pm@Audi1 is in Hindi Language
    * 1 Language can have multiple shows eg shows available in Hindi language are Avengers5pm@Audi1,Avengers7pm@Audi1
    */
 //  @ManyToOne
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   private Language language;
 }

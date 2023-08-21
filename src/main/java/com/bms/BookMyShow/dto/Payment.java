@@ -22,7 +22,7 @@ public class Payment extends BaseModel {
    * 1 PaymentStatus can have multiple Payment -> Processing are Paytm@100,Paytm@200,CC@100
    */
 //  @ManyToOne
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   PaymentStatus paymentStatus;
   /**
    * 1 Payment is only associated with 1 PaymentVendor -> Paytm@100 is Processing via Paytm

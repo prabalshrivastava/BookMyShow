@@ -16,6 +16,9 @@ public class Seat extends BaseModel {
    * 1 SeatType RECLINER can belong to multiple seats A1,A2....
    */
 //  @ManyToOne
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   private SeatType seatType;
+
+  @Enumerated(EnumType.ORDINAL)
+  private SeatStatus seatStatus;
 }
