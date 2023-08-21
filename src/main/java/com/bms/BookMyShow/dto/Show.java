@@ -2,12 +2,11 @@ package com.bms.BookMyShow.dto;
 
 import jakarta.persistence.Entity;
 import java.time.LocalDateTime;
-import java.util.List;
 import lombok.Data;
 
 @Data
 @Entity
-public class Show extends BaseClass {
+public class Show extends BaseModel {
   private LocalDateTime showStartTime;
   private LocalDateTime showEndTime;
   /**

@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Ticket extends BaseClass {
+public class Ticket extends BaseModel {
 
   List<ShowSeat> showSeats;
   Float amount;

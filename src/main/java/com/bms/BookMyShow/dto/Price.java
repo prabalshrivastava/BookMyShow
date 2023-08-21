@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Price extends BaseClass {
+public class Price extends BaseModel {
 
   Double base;
   Double fees;

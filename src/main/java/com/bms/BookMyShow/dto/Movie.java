@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Movie extends BaseClass {
+public class Movie extends BaseModel {
   private String name;
   private List<Cast> casts;
   private List<Genre> genre;

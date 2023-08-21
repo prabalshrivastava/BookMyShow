@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Discount extends BaseClass {
+public class Discount extends BaseModel {
   List<String> promotionalVouchers;
   List<String> paymentVendorDiscount;
 }

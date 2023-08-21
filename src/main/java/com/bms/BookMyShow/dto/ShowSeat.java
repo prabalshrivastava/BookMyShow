@@ -10,7 +10,7 @@ import lombok.Data;
  * A1-Recliner is a seat
  * A ShowSeat is the Avengers 5pm Recliner A1
  */
-public class ShowSeat extends BaseClass {
+public class ShowSeat extends BaseModel {
   private Show show;
   private Seat seat;
   private ShowSeatState showSeatState;

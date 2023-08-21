@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Imdb extends BaseClass {
+public class Imdb extends BaseModel {
   private int rating;
   private List<String> reviews;//limiting it here
 }

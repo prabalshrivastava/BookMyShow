@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @MappedSuperclass
-public class BaseClass {
+public class BaseModel {
   @Id
   private int id;
 }

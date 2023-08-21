@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Template extends BaseClass{
+public class Template extends BaseModel {
 
 }

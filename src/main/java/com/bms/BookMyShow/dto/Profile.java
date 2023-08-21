@@ -1,12 +1,11 @@
 package com.bms.BookMyShow.dto;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.MappedSuperclass;
 import lombok.Data;
 
 @Data
 @Entity
-public class Profile extends BaseClass {
+public class Profile extends BaseModel {
   String name;
   Gender gender;
   Byte age;
