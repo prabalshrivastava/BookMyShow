@@ -1,6 +1,8 @@
 package com.bms.BookMyShow.dto;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -39,4 +41,8 @@ public class Show extends BaseModel {
 //  @ManyToOne
   @Enumerated(EnumType.ORDINAL)
   private Language language;
+
+  @ElementCollection
+  @Enumerated(EnumType.ORDINAL)
+  private List<MovieFormat> movieFormats;
 }
