@@ -23,6 +23,11 @@ public class Ticket extends BaseModel {
    */
   @OneToMany
   List<Payment> payments;
+  /**
+   * 1 Ticket has 1 TicketStatus -> Ticket 999 is Booked
+   * 1 TicketStatus is associated with multiple ticket -> Booked are ticket 999,213
+   */
+  @ManyToOne
   TicketStatus ticketStatus;
   /**
    * 1 Ticket has 1 User -> Ticket 999 belongs to Prabal
