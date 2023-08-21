@@ -1,12 +1,11 @@
 package com.bms.BookMyShow.dto;
 
-import javax.persistence.ElementCollection;
+import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import java.time.LocalDateTime;
 import lombok.Data;
 
 @Data

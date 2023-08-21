@@ -1,10 +1,5 @@
 package com.bms.BookMyShow.dto;
 
-import javax.persistence.Entity;
-import java.time.LocalDateTime;
-import lombok.Data;
-
-
 public enum Language {
   English,
   MandarinChinese,

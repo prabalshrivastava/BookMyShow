@@ -1,12 +1,11 @@
 package com.bms.BookMyShow.dto;
 
+import java.util.List;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import java.util.List;
 import lombok.Data;
 
 @Data
