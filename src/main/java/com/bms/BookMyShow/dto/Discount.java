@@ -1,6 +1,6 @@
 package com.bms.BookMyShow.dto;
 
-import jakarta.persistence.Entity;
+import javax.persistence.Entity;
 import java.util.List;
 import lombok.Data;
 

@@ -1,6 +1,5 @@
 package com.bms.BookMyShow.dto;
 
-import org.hibernate.type.descriptor.jdbc.JdbcTypeFamilyInformation.Family;
 
 public enum Genre {
   Action,
