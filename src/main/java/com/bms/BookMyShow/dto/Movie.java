@@ -1,6 +1,9 @@
 package com.bms.BookMyShow.dto;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import java.util.List;
@@ -21,7 +24,9 @@ public class Movie extends BaseModel {
    * 1 Movie can have multiple Genre -> Avengers has Genre as science fiction, fantasy, and adventure
    * 1 Genre can have multiple Movies -> SciFi movies are Blade Runner (1982),The Matrix (1999),Inception (2010)
    */
-  @ManyToMany
+//  @ManyToMany
+  @ElementCollection
+  @Enumerated(EnumType.STRING)
   private List<Genre> genre;
   /**
    * 1 Movie can have 1 IMDB rating. -> Avengers has 5 star rating with reviews associated
@@ -33,13 +38,17 @@ public class Movie extends BaseModel {
    * 1 Movie can have multiple Language -> Avengers is available in English,MandarinChinese,Spanish,Hindi
    * 1 Language can have multiple Movies -> Movies in Hindi are Blade Runner (1982),The Matrix (1999),Inception (2010)
    */
-  @ManyToMany
+//  @ManyToMany
+  @ElementCollection
+  @Enumerated(EnumType.STRING)
   private List<Language> languages;
   private float duration;
   /**
    * 1 Movie can have multiple MovieFormat -> Avengers is available in 2D,3D,imax,
    * 1 MovieFormat can have multiple Movies -> Movies available in 2D are Blade Runner (1982),The Matrix (1999),Inception (2010)
    */
-  @ManyToMany
+//  @ManyToMany
+  @ElementCollection
+  @Enumerated(EnumType.STRING)
   private List<MovieFormat> movieFormats;
 }

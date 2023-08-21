@@ -1,6 +1,9 @@
 package com.bms.BookMyShow.dto;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import java.util.List;
@@ -20,6 +23,8 @@ public class Auditorium extends BaseModel {
    * 1 Auditorium had multiple MovieFormats _3D,imax,dolbyAtmos,dolbyVision
    * 1 MovieFormat can belong to multiple Auditorium eg 3D can belong to Audi1,Audi2
    */
-  @ManyToMany
+//  @ManyToMany
+  @ElementCollection
+  @Enumerated(EnumType.STRING)
   private List<MovieFormat> movieFormats;
 }

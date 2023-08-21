@@ -1,6 +1,9 @@
 package com.bms.BookMyShow.dto;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
@@ -29,6 +32,7 @@ public class ShowSeat extends BaseModel {
    * 1 ShowSeat can have 1 ShowSeatState -> Avengers@5pm@Audi1@A1 is BOOKED
    * 1 ShowSeatState can be associated with multiple ShowSeat. -> BOOKED ShowSeatState are Avengers@5pm@Audi1@A1,Avengers@5pm@Audi1@A2,Avengers@5pm@Audi1@A3
    */
-  @ManyToOne
+//  @ManyToOne
+  @Enumerated(EnumType.STRING)
   private ShowSeatState showSeatState;
 }

@@ -1,6 +1,9 @@
 package com.bms.BookMyShow.dto;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import java.util.List;
@@ -19,8 +22,10 @@ public class Cast extends BaseModel {
    * 1 Cast can have multiple CastType ->  Shah Rukh Khan is an Actor,Producer
    * 1 CastType can be associated with a multiple Cast -> Actor,Producer are Shah Rukh Khan,Amir Khan
    */
-  @ManyToMany
-  private CastType castType;
+//  @ManyToMany
+  @ElementCollection
+  @Enumerated(EnumType.STRING)
+  private List<CastType> castType;
   /**
    * 1 Cast can work in multiple Movies -> Robert Downey Jr worked on Iron Man (2008),Sherlock Holmes (2009),Chaplin (1992),Avengers: Endgame (2019)
    * 1 Movie can have multiple casts -> Avengers has Robert Downey Jr,Chris Evans,Mark Ruffalo,Chris Hemsworth,Scarlett Johansson,Jeremy Renner,Tom Hiddleston,Clark Gregg

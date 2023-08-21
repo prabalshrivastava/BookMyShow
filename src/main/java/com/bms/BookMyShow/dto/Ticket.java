@@ -1,6 +1,9 @@
 package com.bms.BookMyShow.dto;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import java.util.List;
@@ -27,7 +30,8 @@ public class Ticket extends BaseModel {
    * 1 Ticket has 1 TicketStatus -> Ticket 999 is Booked
    * 1 TicketStatus is associated with multiple ticket -> Booked are ticket 999,213
    */
-  @ManyToOne
+//  @ManyToOne
+  @Enumerated(EnumType.STRING)
   TicketStatus ticketStatus;
   /**
    * 1 Ticket has 1 User -> Ticket 999 belongs to Prabal

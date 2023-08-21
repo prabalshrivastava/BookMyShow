@@ -1,6 +1,9 @@
 package com.bms.BookMyShow.dto;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import java.time.LocalDateTime;
@@ -19,7 +22,8 @@ public class Payment extends BaseModel {
    * 1 Payment is only associated with 1 PaymentStatus -> Paytm@100 is Processing
    * 1 PaymentStatus can have multiple Payment -> Processing are Paytm@100,Paytm@200,CC@100
    */
-  @ManyToOne
+//  @ManyToOne
+  @Enumerated(EnumType.STRING)
   PaymentStatus paymentStatus;
   /**
    * 1 Payment is only associated with 1 PaymentVendor -> Paytm@100 is Processing via Paytm

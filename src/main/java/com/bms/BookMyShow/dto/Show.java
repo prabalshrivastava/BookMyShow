@@ -1,6 +1,9 @@
 package com.bms.BookMyShow.dto;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import java.time.LocalDateTime;
@@ -28,12 +31,14 @@ public class Show extends BaseModel {
    * 1 Show can have 1 status at a time. ie Avengers5pm@Audi1 is Running
    * 1 ShowStatus can be applicable for multiple shows ie Running Shows are Avengers5pm@Audi1,Avengers7pm@Audi1,Avengers5pm@Audi2
    */
-  @ManyToOne
+//  @ManyToOne
+  @Enumerated(EnumType.STRING)
   private ShowStatus showStatus;
   /**
    * 1 Show can have a single language for the current Show Avengers5pm@Audi1 is in Hindi Language
    * 1 Language can have multiple shows eg shows available in Hindi language are Avengers5pm@Audi1,Avengers7pm@Audi1
    */
-  @ManyToOne
+//  @ManyToOne
+  @Enumerated(EnumType.STRING)
   private Language language;
 }
