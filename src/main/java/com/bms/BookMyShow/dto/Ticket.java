@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import lombok.Data;
@@ -28,11 +29,10 @@ public class Ticket extends BaseModel {
    * 1 Ticket has multiple ShowSeat -> Ticket 999 has
    * Avengers@5pm@Audi1@A1,Avengers@5pm@Audi1@A2,Avengers@5pm@Audi1@A3
    * <p>
-   * 1 ShowSeat is only associated with 1 ticket -> Avengers@5pm@Audi1@A1 is associated with the
-   * ticket 999
+   * 1 ShowSeat is only associated with multiple ticket -> Avengers@5pm@Audi1@A1 is associated with the
+   * ticket 999 but if ticket999 gets cancelled then Avengers@5pm@Audi1@A1 will be associated with new ticket213
    */
-  //this is different from what is taught.
-  @OneToMany
+  @ManyToMany
   List<ShowSeat> showSeats;
 
   private double totalAmount;
