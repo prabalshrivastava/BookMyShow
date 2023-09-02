@@ -11,5 +11,5 @@ public class TicketRequestDto {
   //3. Seats that he wants to book for that show.
   public Long userId;
   public Long showId;
-  public List<Long> seatId;
+  public List<Long> showSeatIds;
 }
